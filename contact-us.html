@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://bootswatch.com/5/zephyr/bootstrap.min.css" />
+
+  <!-- Owl Carousel CSS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+
+  <!-- Material - Google Fonts -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- Inter - Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/utility.css" />
+  <link rel="stylesheet" href="./css/contact-us.css" />
+  <link rel="stylesheet" href="./css/contact-us-responsive.css" />
+
+  <title>Contact Us | School Management</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light" id="main-nav">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html">
+        <img id="brand-img" class="img-fluid" src="./images/brand.png" alt="brand-img" />
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./index.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fas fa-child"></i> School Life
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="./gallery.html"><i class="fas fa-photo-film"></i> Gallery</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fas fa-school"></i> General
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="./enrollment-form.html"><i class="fas fa-paperclip"></i> Enrollment
+                  Form</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./study-material.html"><i class="fas fa-book"></i> Study Material</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"><i class="fas fa-chalkboard-user"></i> Academics</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fas fa-newspaper"></i> News
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="./news.html"><i class="fas fa-newspaper"></i> News</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fas fa-address-card"></i> About
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="./about-us.html"><i class="fas fa-address-card"></i> About Us</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./our-team.html"><i class="fas fa-users"></i> Our Team</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./alumni.html"><i class="fas fa-award"></i> Alumni</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./hall-of-fame.html"><i class="fas fa-user-graduate"></i> Hall of
+                  Fame</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./sponsors.html"><i class="fas fa-money-check"></i> Sponsors</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="./contact.html"><i class="fas fa-address-book"></i> Contact</a>
+          </li>
+        </ul>
+        <a href="#" target="_blank" id="login-btn" class="btn btn-dark"><i class="fas fa-sign-in-alt"></i> Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="contact-banner">
+    <div class="container">
+      <p>Get in touch</p>
+      <h2>Contact Us</h2>
+    </div>
+  </section>
+
+  <section class="contact-details">
+    <div class="container">
+      <div class="contact-box">
+        <div class="left">
+          <h2>Have any questions?</h2>
+          <div class="address">
+            <div class="icon">
+              <span class="material-symbols-outlined">
+                location_on
+              </span>
+            </div>
+            <div class="content">
+              <p>111 Khaya Lami Thornhill. Bendor,
+                Polokwane 0699</p>
+            </div>
+          </div>
+          <div class="phone">
+            <div class="icon">
+              <span class="material-symbols-outlined">
+                phone_in_talk
+              </span>
+            </div>
+            <div class="content">
+              <p>+27-737878798</p>
+              <p>Mon to Fri</p>
+              <p>9am to 6pm</p>
+            </div>
+          </div>
+          <div class="email">
+            <div class="icon">
+              <span class="material-symbols-outlined">
+                mail
+              </span>
+            </div>
+            <div class="content">
+              <p>info@nextschool.co.za</p>
+              <p>Send us your query anytime!</p>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="input-box">
+            <input type="email" id="email" value="">
+            <label for="email">Enter your Email Id</label>
+            <span class="error">this is error message</span>
+          </div>
+          <div class="input-box">
+            <input type="text" id="name" value="">
+            <label for="name">Enter Your Name</label>
+            <span class="error">this is error message</span>
+          </div>
+          <div class="input-box">
+            <input type="text" id="phone" value="">
+            <label for="phone">Enter Your Mobile No.</label>
+            <span class="error">this is error message</span>
+          </div>
+          <div class="input-box">
+            <textarea name="" id="message" cols="30" rows="10" value=""></textarea>
+            <label for="message">Enter Your Message</label>
+            <span class="error">this is error message</span>
+          </div>
+          <div class="input-box">
+            <button type="submit"><span class="material-symbols-outlined relative">
+                send
+              </span> Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="google-map">
+    <div class="container">
+      <div class="wrapper">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14309.00176972406!2d27.85925!3d-26.28598!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe1aee2c6f955ff99!2sMveledzandivho%20Primary%20School!5e0!3m2!1sen!2sin!4v1641993124796!5m2!1sen!2sin"
+          width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="sponsor-list">
+    <div class="container">
+      <div class="owl-carousel">
+        <div>
+          <img src="https://www.mtn.com/wp-content/themes/mtn-refresh/public/img/mtn-logo.svg" alt="">
+        </div>
+        <div>
+          <img src="https://www.vodacom.com/images/logo.svg" alt="">
+        </div>
+        <div>
+          <img src="https://www.flysaa.com/saa-airways-theme/airways/images/logo.png" alt="">
+        </div>
+        <div>
+          <img
+            src="https://www.standardbank.co.za/on/demandware.static/-/Library-Sites-SBSharedLibrary/default/dw4ac77d59/common/logo.svg"
+            alt="">
+        </div>
+        <div>
+          <img
+            src="https://www.fnb.co.za/_assets/images/generic/skins/00/navigation/secondary-logo/header-logo_lrg.svg?v=1668314727000"
+            alt="">
+        </div>
+        <div>
+          <img src="https://www.castlelager.co.za/sites/g/files/wnfebl7216/files/castle-lager/castle%20logo%202.png"
+            alt="">
+        </div>
+        <div>
+          <img src="https://www.nandos.co.za/v16.2.1/assets/toolkit/images/nandos-logo.svg" alt="">
+        </div>
+        <div>
+          <img src="https://www.absa.co.za/content/dam/south-africa/absa/Iconography/Absa-logo-grey.jpg" alt="">
+        </div>
+        <div>
+          <img
+            src="https://personal.nedbank.co.za/etc.clientlibs/nedbank/clientlibs/clientlib-base/resources/img/80px.svg"
+            alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-sponsor">
+    <div class="container">
+      <a href="">Sponsor our School</a>
+    </div>
+  </footer>
+
+  <footer class="footer-main">
+    <div class="container">
+      <div class="grid-4">
+        <div class="app-links">
+          <img src="./images/brand-light.png" alt="" />
+          <div class="links">
+            <a href="#">
+              <img src="./images/huawei-app-gallery.png" alt="" />
+            </a>
+            <a href="#">
+              <img src="./images/google-play.png" alt="" />
+            </a>
+            <a href="#">
+              <img src="./images/app-store.png" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="contact-us">
+          <h2>Contact Us</h2>
+          <p>
+            info@nextschool.co.za <br />
+            +27-737878798
+          </p>
+          <p>
+            Office hours: 9am to 6 pm <br />
+            Mon to Fri
+          </p>
+        </div>
+        <div class="address">
+          <h2>Physical Address</h2>
+          <p>111 Khaya Lami Thornhill. Bendor, Polokwane 0699</p>
+        </div>
+        <div class="social-media">
+          <h2>Social Media</h2>
+          <div>
+            <a href="">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="middle">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Apply</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Study Material</a></li>
+          <li><a href="#">Media</a></li>
+          <li><a href="#">Sponsors</a></li>
+          <li><a href="#">Alumni</a></li>
+        </ul>
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia ipsa
+          beatae veritatis amet quae dolorum eligendi vero iure, labore
+          praesentium, quod asperiores maiores explicabo recusandae tempore ut
+          laboriosam. Alias, nihil?
+        </p>
+        <div class="covid">
+          <img src="./images/covid-19-image.png" alt="" />
+          <p>
+            For News and Information Regarding Covid-19, <br />
+            Please Visit
+            <a target="_blank" href="https://sacoronavirus.co.za/">SA Corona Virus</a>
+          </p>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>&copy; 2022, Next School. All right reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+  <!-- Bootstrap 5 Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Owl Carousel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: false,
+        dots: true,
+        autoplay: true,
+        autoplayHoverPause: true,
+        responsive: {
+          0: {
+            items: 2
+          },
+          576: {
+            items: 3
+          },
+          992: {
+            items: 5
+          },
+          1200: {
+            items: 6
+          }
+        }
+      });
+    });
+  </script>
+
+  <script>
+    const email = document.getElementById('email');
+    const name = document.getElementById('name');
+    const phone = document.getElementById('phone');
+    const message = document.getElementById('message');
+
+    [email, name, phone, message].forEach(input => {
+      input.addEventListener('keyup', (e) => {
+        if (e.target.value !== "") {
+          e.target.classList.add('has-data');
+        }
+        else {
+          e.target.classList.remove('has-data');
+        }
+      })
+    })
+
+
+  </script>
+
+  <script src="./js/main.js"></script>
+
+</body>
+
+</html>

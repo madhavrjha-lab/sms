@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://bootswatch.com/5/zephyr/bootstrap.min.css" />
+
+  <style>
+    :is(#add-student-form, #add-staff-form, #download-book-form) {
+      padding: calc(3rem + var(--header-height)) 0 3rem;
+      background: url("../images/shapes-bg.png") repeat center center/contain;
+    }
+
+    :is(#add-student-form, #add-staff-form, #download-book-form) form {
+      background: #f5f4fa;
+      color: #29292b;
+      padding: 2rem 1rem;
+      width: 100%;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      border-radius: 10px;
+    }
+
+    :is(#add-student-form, #add-staff-form, #download-book-form) form h2 {
+      color: #2c2c2e;
+      font-weight: 700;
+      font-family: sans-serif;
+      font-size: 2rem;
+      letter-spacing: 1.5px;
+      padding-bottom: 1rem;
+    }
+
+    :is(#add-student-form, #add-staff-form, #download-book-form) article {
+      border-top: 2px solid #ccc;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      gap: 2rem;
+    }
+
+    :is(#add-student-form, #add-staff-form, #download-book-form) article div:nth-child(1) h3 {
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    :is(#add-student-form, #add-staff-form, #download-book-form) article div:nth-child(1) p {
+      font-size: 1rem;
+      color: #666;
+      width: 90%;
+    }
+
+    :is(#add-student-form, #add-staff-form, #download-book-form) form :is(label, input, textarea, select, option) {
+      box-sizing: border-box;
+      display: block;
+      font-size: 0.9rem;
+      width: 90%;
+    }
+
+    :is(#add-student-form, #add-staff-form, #download-book-form) form :is(input, textarea, select, option) {
+      padding: 6px 13px;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      border: 2px solid #ccc;
+    }
+
+    :is(#add-student-form, #add-staff-form, #download-book-form) form button[type="button"] {
+      border: none;
+      outline: none;
+      background-color: rgba(0 0 0 / 10%);
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.6s;
+      margin-left: 1rem;
+    }
+
+    :is(#add-student-form, #add-staff-form, #download-book-form) form button[type="button"]:hover {
+      background: rgba(0 0 0 / 80%);
+      color: #fff;
+    }
+
+    :is(#add-student-form, #add-staff-form, #download-book-form) form button[type="button"]:active {
+      transform: scale(0.9);
+    }
+
+    :is(#add-student-form, #add-staff-form, #download-book-form) form input[type="file"] {
+      border: unset;
+    }
+
+    :is(#add-student-form, #add-staff-form, #download-book-form) form>div {
+      text-align: right;
+    }
+
+    :is(#add-student-form, #add-staff-form, #download-book-form) form :is(button[type="submit"], button[type="reset"]) {
+      padding: 0.4rem 1.4rem;
+      margin-right: 0.5rem;
+      border-radius: 5px;
+      background: transparent;
+      font-weight: 500;
+      font-size: 0.9rem;
+      border: 3px solid var(--theme-primary-color);
+      transform: scale(0.95);
+    }
+
+    :is(#add-student-form, #add-staff-form, #download-book-form) form :is(button[type="submit"], button[type="reset"]):hover {
+      transform: scale(1);
+    }
+
+    :is(#add-student-form, #add-staff-form, #download-book-form) form button[type="reset"] {
+      color: var(--theme-primary-color);
+    }
+
+    :is(#add-student-form, #add-staff-form, #download-book-form) form button[type="submit"] {
+      background: var(--theme-primary-color);
+      color: #fff;
+    }
+
+
+    #download-book-form article.download-section {
+      border-top: unset;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      align-items: stretch;
+      text-align: center;
+    }
+
+    #download-book-form article.download-section .box {
+      background: url("./images/book-cover.jpeg") no-repeat center center/cover;
+      width: 200px;
+      height: 300px;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      transition: all 0.5s;
+      position: relative;
+    }
+
+    #download-book-form article.download-section .box:hover {
+      transform: scale(1.05);
+    }
+
+    #download-book-form article.download-section .box>p {
+      width: 100%;
+    }
+
+    #download-book-form article.download-section .box>p:first-child {
+      text-align: center;
+      font-family: cursive;
+      font-size: 1.4rem;
+      padding-top: 10px;
+      color: #ccc;
+      margin-bottom: 0;
+    }
+
+    #download-book-form article.download-section .box>p:nth-child(2) {
+      font-family: "Cabin Sketch";
+      font-size: 1.7rem;
+      font-weight: 900;
+      line-height: 1;
+      padding-top: 10px;
+      color: #999;
+      margin-bottom: 13px;
+    }
+
+    #download-book-form article.download-section .box>p:nth-child(3) {
+      font-family: "Rubik", sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 3px;
+      color: #999;
+      margin-bottom: 12px;
+    }
+
+    #download-book-form article.download-section .box p:nth-child(4) span {
+      background: #888;
+      border-radius: 2px;
+      display: inline-block;
+      padding: 2px 5px;
+      letter-spacing: 2px;
+      color: #fff;
+      font-size: 0.9rem;
+      text-transform: capitalize;
+    }
+
+    #download-book-form article.download-section .box>p:nth-child(5) {
+      text-transform: uppercase;
+      color: #888;
+      padding-top: 5px;
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+    }
+
+    #download-book-form article.download-section .box a {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 0;
+      font-family: cursive;
+      text-decoration: none;
+      color: #ccc;
+      display: block;
+      width: 100%;
+      font-size: 0.9rem;
+    }
+
+    #download-book-form article.download-section .box a:hover {
+      color: #fff;
+    }
+
+    /* Section#download-book-form article.mind-the-gap */
+
+    section#download-book-form .mind-the-gap {
+      display: block;
+    }
+
+    section#download-book-form .mind-the-gap h4 {
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    section#download-book-form .mind-the-gap p {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    section#download-book-form .mind-the-gap .table-container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    section#download-book-form .mind-the-gap .table-container table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 3rem 0;
+    }
+
+    section#download-book-form .mind-the-gap .table-container :is(td, th) {
+      border: 1px solid #999;
+      padding: 10px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    section#download-book-form .mind-the-gap .table-container tr:not(:first-child) :is(td:first-child, th:first-child) {
+      text-align: left;
+    }
+
+    section#download-book-form .mind-the-gap .table-container tr td:nth-child(2) {
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    section#download-book-form .mind-the-gap .table-container table a {
+      text-decoration: none;
+    }
+
+    /* 
+ =========================================================================================================================
+  Section#add-staff-form
+  Section#add-student-form
+  Section#download-book-form
+ =========================================================================================================================
+*/
+
+    @media (max-width: 1400px) {
+      :is(#add-student-form, #add-staff-form, #download-book-form) form h2 {
+        font-size: 1.7rem;
+      }
+
+      :is(#add-student-form, #add-staff-form, #download-book-form) article div:nth-child(1) h3 {
+        font-size: 1.1rem;
+      }
+
+      :is(#add-student-form, #add-staff-form, #download-book-form) article div:nth-child(1) p {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 992px) {
+      :is(#add-student-form, #add-staff-form, #download-book-form) article {
+        grid-template-columns: 100%;
+        gap: 1rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      :is(#add-student-form, #add-staff-form, #download-book-form) form h2 {
+        font-size: 1.5rem;
+      }
+
+      :is(#add-student-form, #add-staff-form, #download-book-form) article {
+        padding: 1rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      :is(#add-student-form, #add-staff-form, #download-book-form) {
+        padding: calc(1rem + var(--header-height)) 0 1rem;
+      }
+
+      :is(#add-student-form, #add-staff-form, #download-book-form) form {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      }
+
+      :is(#add-student-form, #add-staff-form, #download-book-form) form h2 {
+        font-size: 1.3rem;
+      }
+
+      :is(#add-student-form, #add-staff-form, #download-book-form) article div:nth-child(1) h3 {
+        color: #555;
+      }
+
+      :is(#add-student-form, #add-staff-form, #download-book-form) article div:nth-child(1) p {
+        width: 100%;
+        color: #999;
+      }
+
+      :is(#add-student-form, #add-staff-form, #download-book-form) article label {
+        color: #555;
+      }
+
+      :is(#add-student-form, #add-staff-form, #download-book-form) form :is(label, input, textarea, select, option) {
+        width: 100%;
+      }
+    }
+
+    /* 
+ =========================================================================================================================
+  Section#download-book-form
+ =========================================================================================================================
+*/
+
+    @media (max-width: 1400px) {
+      #download-book-form article.download-section .box {
+        width: 180px;
+        height: 270px;
+      }
+
+      #download-book-form article.download-section .box>p:first-child {
+        font-size: 1.2rem;
+        padding-top: 0.5rem;
+      }
+
+      #download-book-form article.download-section .box>p:nth-child(2) {
+        font-size: 1.3rem;
+      }
+
+      #download-book-form article.download-section .box>p:nth-child(4) {
+        margin-bottom: 12px;
+      }
+
+      #download-book-form article.download-section .box>p:nth-child(5) {
+        padding-top: 0;
+      }
+    }
+
+    @media (max-width: 992px) {
+      #download-book-form article.download-section {
+        gap: 1rem;
+      }
+
+      #download-book-form article.download-section .box {
+        width: 160px;
+        height: 240px;
+        padding: 0.5rem;
+      }
+
+      #download-book-form article.download-section .box>p:first-child {
+        font-size: 1rem;
+        padding-top: 0.5rem;
+      }
+
+      #download-book-form article.download-section .box>p:nth-child(2) {
+        font-size: 1.2rem;
+      }
+
+      #download-book-form article.download-section .box>p:nth-child(4) {
+        margin-bottom: 12px;
+      }
+
+      #download-book-form article.download-section .box>p:nth-child(4) span {
+        font-size: 0.7rem;
+      }
+
+      #download-book-form article.download-section .box a {
+        bottom: 1rem;
+      }
+    }
+
+    @media (max-width: 444px) {
+      #download-book-form article.download-section {
+        gap: 12px;
+      }
+
+      #download-book-form article.download-section .box {
+        width: 120px;
+        height: 180px;
+        padding: 0.4rem;
+      }
+
+      #download-book-form article.download-section .box>p:first-child {
+        font-size: 0.8rem;
+        padding-top: 0;
+        margin-bottom: 5px;
+      }
+
+      #download-book-form article.download-section .box>p:nth-child(2) {
+        font-size: 1rem;
+        padding-top: 0;
+        margin-bottom: 5px;
+      }
+
+      #download-book-form article.download-section .box>p:nth-child(3) {
+        font-size: 0.7rem;
+        letter-spacing: 1.5px;
+        padding-top: 0;
+        margin-bottom: 5px;
+      }
+
+      #download-book-form article.download-section .box>p:nth-child(4) {
+        margin-bottom: 5px;
+      }
+
+      #download-book-form article.download-section .box>p:nth-child(4) span {
+        font-size: 0.7rem;
+      }
+
+      #download-book-form article.download-section .box>p:nth-child(5) {
+        font-size: 0.7rem;
+        margin-bottom: 5px;
+      }
+
+      #download-book-form article.download-section .box a {
+        font-size: 0.7rem;
+        bottom: 1rem;
+      }
+    }
+
+    /* 
+  Section#download-book-form article.mind-the-gap
+*/
+
+    @media (max-width: 576px) {
+      section#download-book-form .mind-the-gap .table-container :is(td, th) {
+        font-size: 0.7rem;
+        padding: 10px 5px;
+      }
+
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <section id="download-book-form">
+    <div class="container">
+      <form action="">
+        <article class="story-telling">
+          <div>
+            <h3>A Big Book of Little Stories</h3>
+            <p>
+              We have free books provided by the Government of South Africa
+              for Grade One, Grade Two, and Grade Three. These could be used
+              for storytelling and group guided reading, and books are
+              available in most languages. You just need to select the Grade,
+              language, and book name afterword's you will be able to download
+              the book and read it for free.
+            </p>
+          </div>
+          <div>
+            <label for="designation">Grade*</label>
+            <select name="grade" required>
+              <option value="">Choose..</option>
+            </select>
+
+            <label for="">Language*</label>
+            <select name="language" required>
+              <option value="">Choose..</option>
+            </select>
+
+            <label for="">Book*</label>
+            <select name="book" id="" required>
+              <option value="">Choose...</option>
+            </select>
+          </div>
+        </article>
+
+        <article class="download-section">
+          <div class="box">
+            <p>A Big Book of Little Stories</p>
+            <p>Book Title</p>
+            <p>Grade 1</p>
+            <p><span>English</span></p>
+            <p>12 MB</p>
+            <a href="${book.url}" target="_blank" download="${book.url}">
+              <i class="fas fa-download"></i> Download Book
+            </a>
+          </div>
+          <div class="box">
+            <p>A Big Book of Little Stories</p>
+            <p>Book Title</p>
+            <p>Grade 1</p>
+            <p><span>English</span></p>
+            <p>12 MB</p>
+            <a href="${book.url}" target="_blank" download="${book.url}">
+              <i class="fas fa-download"></i> Download Book
+            </a>
+          </div>
+          <div class="box">
+            <p>A Big Book of Little Stories</p>
+            <p>Book Title</p>
+            <p>Grade 1</p>
+            <p><span>English</span></p>
+            <p>12 MB</p>
+            <a href="${book.url}" target="_blank" download="${book.url}">
+              <i class="fas fa-download"></i> Download Book
+            </a>
+          </div>
+          <div class="box">
+            <p>A Big Book of Little Stories</p>
+            <p>Book Title</p>
+            <p>Grade 1</p>
+            <p><span>English</span></p>
+            <p>12 MB</p>
+            <a href="${book.url}" target="_blank" download="${book.url}">
+              <i class="fas fa-download"></i> Download Book
+            </a>
+          </div>
+          <div class="box">
+            <p>A Big Book of Little Stories</p>
+            <p>Book Title</p>
+            <p>Grade 1</p>
+            <p><span>English</span></p>
+            <p>12 MB</p>
+            <a href="${book.url}" target="_blank" download="${book.url}">
+              <i class="fas fa-download"></i> Download Book
+            </a>
+          </div>
+          <div class="box">
+            <p>A Big Book of Little Stories</p>
+            <p>Book Title</p>
+            <p>Grade 1</p>
+            <p><span>English</span></p>
+            <p>12 MB</p>
+            <a href="${book.url}" target="_blank" download="${book.url}">
+              <i class="fas fa-download"></i> Download Book
+            </a>
+          </div>
+        </article>
+      </form>
+    </div>
+  </section>
+
+</body>
+
+</html>

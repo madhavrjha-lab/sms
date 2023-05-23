@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://bootswatch.com/5/zephyr/bootstrap.min.css" />
+
+  <!-- Owl Carousel CSS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+
+  <!-- Material - Google Fonts -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- Inter - Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/utility.css" />
+  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="stylesheet" href="./css/index-responsive.css" />
+
+  <title>School Management | Home Page</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light" id="main-nav">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html">
+        <img id="brand-img" class="img-fluid" src="./images/brand.png" alt="brand-img" />
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./index.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fas fa-child"></i> School Life
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="./gallery.html"><i class="fas fa-photo-film"></i> Gallery</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fas fa-school"></i> General
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="./enrollment-form.html"><i class="fas fa-paperclip"></i> Enrollment
+                  Form</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./study-material.html"><i class="fas fa-book"></i> Study Material</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"><i class="fas fa-chalkboard-user"></i> Academics</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fas fa-newspaper"></i> News
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="./news.html"><i class="fas fa-newspaper"></i> News</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fas fa-address-card"></i> About
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="./about-us.html"><i class="fas fa-address-card"></i> About Us</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./our-team.html"><i class="fas fa-users"></i> Our Team</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./alumni.html"><i class="fas fa-award"></i> Alumni</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./hall-of-fame.html"><i class="fas fa-user-graduate"></i> Hall of
+                  Fame</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./sponsors.html"><i class="fas fa-money-check"></i> Sponsors</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="./contact.html"><i class="fas fa-address-book"></i> Contact</a>
+          </li>
+        </ul>
+        <a href="#" target="_blank" id="login-btn" class="btn btn-dark"><i class="fas fa-sign-in-alt"></i> Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="welcome">
+    <div class="container">
+      <div class="left">
+        <p class="m-text-uppercase">Why Choose us in 2022</p>
+        <h2 class="m-text-heading">Welcome to NextSchool</h2>
+        <img src="./images/welcome-image.png" />
+        <div class="m-text-scroll">
+          We are on a journey to digitally transform every school in South
+          Africa - It's our mission to ensure that our learners can school in
+          a safe, tranquil, <em>stimulating</em> &
+          <strong>intellectually</strong> challenging
+          <br />
+          <br />
+
+          <ul>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem ipsum dolor sit.</li>
+          </ul>
+
+          We are on a journey to digitally transform every school in South
+          Africa - It's our mission to ensure that our learners can school in
+          a safe, tranquil, stimulating & intellectually challenging <br />
+          <br />
+        </div>
+        <div class="buttons-container">
+          <a href="">
+            <span class="material-symbols-outlined">
+              article
+            </span> Admission
+          </a>
+          <a href="">
+            <span class="material-symbols-outlined">
+              smartphone
+            </span> Mobile App
+          </a>
+          <a href="">
+            <span class="material-symbols-outlined">
+              groups
+            </span> Our Team</a>
+          <a href="">
+            <span class="material-symbols-outlined">
+              menu_book
+            </span> Digital
+            Library
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="statements">
+    <div class="container">
+      <p class="m-text-uppercase">To the Journey Ahead</p>
+      <h2 class="m-text-heading">Giving every child a great start</h2>
+      <div class="box-container">
+        <div class="box">
+          <!-- <img src="./images/icons/mission.svg" alt="" /> -->
+          <span class="material-symbols-outlined">
+            visibility
+          </span>
+          <p class="m-text-uppercase">Vision</p>
+          <div class="m-text-scroll">
+            Imparting education of global standards that combines both the
+            traditional and the modern ideals., in order to develop well
+            rounded, confident and responsible individuals who aspire to
+            achieve their full potential.
+          </div>
+        </div>
+        <div class="box">
+          <!-- <img src="./images/icons/vision.svg" alt="" /> -->
+          <span class="material-symbols-outlined">
+            flag_circle
+          </span>
+          <p class="m-text-uppercase">Mission</p>
+          <div class="m-text-scroll">
+            Dispensing their duties & to be conscious of their
+            responsibilities towards their fellow citizens, thus fostering a
+            Lifelong Love of Reading & Learning: Through curriculum and
+            enrichment activities
+          </div>
+        </div>
+        <div class="box">
+          <!-- <img src="./images/icons/values.svg" alt="" /> -->
+          <span class="material-symbols-outlined">
+            loyalty
+          </span>
+          <p class="m-text-uppercase">Values</p>
+          <div class="m-text-scroll">
+            Inculcate in students the qualities of both head and heart to
+            combat the challenges of the complex world of today.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="notices">
+    <div class="container">
+      <div class="wrapper">
+        <div class="head">
+          <h2 class="m-text-heading">Notices from NextSchool</h2>
+          <a href="#">View All</a>
+        </div>
+        <div class="box-container">
+          <div class="box">
+            <img src="./images/notice-image.png" alt="" />
+            <p class="date">
+              <span>04</span> August, <br />
+              2022
+            </p>
+            <div class="m-heading-ellipse">Circuit Circular</div>
+            <div class="m-content-ellipse">Principals Meeting</div>
+            <a href="#">Read More</a>
+          </div>
+          <div class="box">
+            <img src="./images/notice-image.png" alt="" />
+            <p class="date">
+              <span>07</span> August, <br />
+              2022
+            </p>
+            <div class="m-heading-ellipse">Happy Freedom Day!!!</div>
+            <div class="m-content-ellipse">Principals Meeting</div>
+            <a href="#">Read More</a>
+          </div>
+          <div class="box">
+            <img src="./images/notice-image.png" alt="" />
+            <p class="date">
+              <span>23</span> August, <br />
+              2022
+            </p>
+            <div class="m-heading-ellipse">National Woman's Day</div>
+            <div class="m-content-ellipse">Principals Meeting</div>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+        <a href="#">View All</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="statistics">
+    <div class="container">
+      <div class="box">
+        <h2>1899</h2>
+        <p>Established</p>
+      </div>
+      <div class="box">
+        <h2>987</h2>
+        <p>No. of Learners</p>
+      </div>
+      <div class="box">
+        <h2>37</h2>
+        <p>No. of Teachers</p>
+      </div>
+      <div class="box">
+        <h2>1 to 12</h2>
+        <p>Grade</p>
+      </div>
+      <div class="box">
+        <h2>1</h2>
+        <p>Quintile</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="news-updates">
+    <div class="container">
+      <p class="m-text-uppercase">BLOGs</p>
+      <h2 class="m-text-heading">News & Updates</h2>
+      <div class="grid">
+        <div class="left">
+          <img src="https://source.unsplash.com/600x300/?hospital" alt="" />
+          <p class="date">
+            <span class="material-symbols-outlined relative"> calendar_month </span>
+            <span class="text">14th August, 2022</span>
+          </p>
+          <p class="m-heading-ellipse">
+            15 pupils hospitalised in Gauteng after consuming 'space cakes'
+          </p>
+          <div class="m-content-ellipse">
+            Fifteen pupils from two schools in Gauteng were admitted to
+            hospital after eating &quot;space cakes&quot;. The cakes were
+            laced with
+          </div>
+          <a href="">Read More</a>
+        </div>
+        <div class="right">
+          <div class="wrapper">
+            <div class="head">
+              <h2 class="m-text-heading">Latest News & Updates</h2>
+              <a href="">Read Older News</a>
+            </div>
+            <div class="body">
+              <div class="news">
+                <div class="details">
+                  <div class="date">
+                    <span class="material-symbols-outlined relative">
+                      calendar_month
+                    </span>
+                    <span class="text">14th August, 2022</span>
+                  </div>
+                  <p class="m-heading-ellipse">
+                    <a href="#">
+                      Council on Higher Education partly clears Walter Sisulu
+                      University on accreditation furore
+                    </a>
+                  </p>
+                  <div class="m-content-ellipse">
+                    The Council on Higher Education (CHE), which is the
+                    accrediting body for higher education qualifications
+                  </div>
+                </div>
+              </div>
+              <div class="news">
+                <img src="https://source.unsplash.com/300x300/?politicians" alt="" />
+                <div class="details">
+                  <div class="date">
+                    <span class="material-symbols-outlined relative">
+                      calendar_month
+                    </span>
+                    <span class="text">14th August, 2022</span>
+                  </div>
+                  <p class="m-heading-ellipse">
+                    <a href="#">
+                      Education minister Angie Motshekga said that inland
+                      schools are expected to open on 12 January 2022
+                    </a>
+                  </p>
+                  <div class="m-content-ellipse">
+                    The Council on Higher Education (CHE), which is the
+                    accrediting body for higher education qualifications
+                  </div>
+                </div>
+              </div>
+              <div class="news">
+                <div class="details">
+                  <div class="date">
+                    <span class="material-symbols-outlined relative">
+                      calendar_month
+                    </span>
+                    <span class="text">14th August, 2022</span>
+                  </div>
+                  <p class="m-heading-ellipse">
+                    <a href="#">
+                      Council on Higher Education partly clears Walter Sisulu
+                      University on accreditation furore
+                    </a>
+                  </p>
+                  <div class="m-content-ellipse">
+                    The Council on Higher Education (CHE), which is the
+                    accrediting body for higher education qualifications
+                  </div>
+                </div>
+              </div>
+              <a href="#">Read Older News</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sponsor-list">
+    <div class="container">
+      <div class="owl-carousel">
+        <div>
+          <img src="https://www.mtn.com/wp-content/themes/mtn-refresh/public/img/mtn-logo.svg" alt="">
+        </div>
+        <div>
+          <img src="https://www.vodacom.com/images/logo.svg" alt="">
+        </div>
+        <div>
+          <img src="https://www.flysaa.com/saa-airways-theme/airways/images/logo.png" alt="">
+        </div>
+        <div>
+          <img
+            src="https://www.standardbank.co.za/on/demandware.static/-/Library-Sites-SBSharedLibrary/default/dw4ac77d59/common/logo.svg"
+            alt="">
+        </div>
+        <div>
+          <img
+            src="https://www.fnb.co.za/_assets/images/generic/skins/00/navigation/secondary-logo/header-logo_lrg.svg?v=1668314727000"
+            alt="">
+        </div>
+        <div>
+          <img src="https://www.castlelager.co.za/sites/g/files/wnfebl7216/files/castle-lager/castle%20logo%202.png"
+            alt="">
+        </div>
+        <div>
+          <img src="https://www.nandos.co.za/v16.2.1/assets/toolkit/images/nandos-logo.svg" alt="">
+        </div>
+        <div>
+          <img src="https://www.absa.co.za/content/dam/south-africa/absa/Iconography/Absa-logo-grey.jpg" alt="">
+        </div>
+        <div>
+          <img
+            src="https://personal.nedbank.co.za/etc.clientlibs/nedbank/clientlibs/clientlib-base/resources/img/80px.svg"
+            alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-sponsor">
+    <div class="container">
+      <a href="">Sponsor our School</a>
+    </div>
+  </footer>
+
+  <footer class="footer-main">
+    <div class="container">
+      <div class="grid-4">
+        <div class="app-links">
+          <img src="./images/brand-light.png" alt="" />
+          <div class="links">
+            <a href="#">
+              <img src="./images/huawei-app-gallery.png" alt="" />
+            </a>
+            <a href="#">
+              <img src="./images/google-play.png" alt="" />
+            </a>
+            <a href="#">
+              <img src="./images/app-store.png" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="contact-us">
+          <h2>Contact Us</h2>
+          <p>
+            info@nextschool.co.za <br />
+            +27-737878798
+          </p>
+          <p>
+            Office hours: 9am to 6 pm <br />
+            Mon to Fri
+          </p>
+        </div>
+        <div class="address">
+          <h2>Physical Address</h2>
+          <p>111 Khaya Lami Thornhill. Bendor, Polokwane 0699</p>
+        </div>
+        <div class="social-media">
+          <h2>Social Media</h2>
+          <div>
+            <a href="">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="middle">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Apply</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Study Material</a></li>
+          <li><a href="#">Media</a></li>
+          <li><a href="#">Sponsors</a></li>
+          <li><a href="#">Alumni</a></li>
+        </ul>
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia ipsa
+          beatae veritatis amet quae dolorum eligendi vero iure, labore
+          praesentium, quod asperiores maiores explicabo recusandae tempore ut
+          laboriosam. Alias, nihil?
+        </p>
+        <div class="covid">
+          <img src="./images/covid-19-image.png" alt="" />
+          <p>
+            For News and Information Regarding Covid-19, <br />
+            Please Visit
+            <a target="_blank" href="https://sacoronavirus.co.za/">SA Corona Virus</a>
+          </p>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>&copy; 2022, Next School. All right reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+  <!-- Bootstrap 5 Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Owl Carousel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: false,
+        dots: true,
+        autoplay: true,
+        autoplayHoverPause: true,
+        responsive: {
+          0: {
+            items: 2
+          },
+          576: {
+            items: 3
+          },
+          992: {
+            items: 5
+          },
+          1200: {
+            items: 6
+          }
+        }
+      });
+    });
+  </script>
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

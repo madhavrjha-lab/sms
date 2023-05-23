@@ -1,0 +1,202 @@
+/* 
+==================================================================================================
+contact-banner
+==================================================================================================
+*/
+
+.contact-banner {
+  padding-top: 120px;
+  width: 100%;
+  height: 450px;
+  background: url("../images/contact-us-bg.png") no-repeat center center/cover;
+  position: relative;
+}
+
+.contact-banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2px);
+  background-color: #141a6b80;
+}
+
+.contact-banner * {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-banner p {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  margin-top: 3rem;
+  margin-bottom: 0;
+  padding: 10px;
+}
+
+.contact-banner h2 {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
+
+/* 
+==================================================================================================
+contact-details
+==================================================================================================
+*/
+
+.contact-details .contact-box {
+  max-width: 900px;
+  margin: auto;
+  position: relative;
+  top: -180px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 1rem;
+}
+
+.contact-details .contact-box .left {
+  background-color: #3843d0;
+  color: #fff;
+  padding: 2rem 3rem;
+  border-radius: 1rem 0 0 1rem;
+}
+
+.contact-details .contact-box .right {
+  background-color: #fff;
+  border-radius: 0 1rem 1rem 0;
+
+  padding: 2rem 3rem;
+  display: grid;
+  align-items: start;
+  justify-content: start;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.contact-details .contact-box h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+.contact-details .contact-box :is(.address, .phone, .email) {
+  padding: 1rem 10px;
+}
+
+.contact-details .contact-box :is(.address, .phone, .email) .icon {
+  background-color: #ffaa4e;
+  color: #fff;
+  line-height: 1;
+  display: inline;
+  padding: 15px 15px 10px 15px;
+  border-radius: 10px;
+
+  position: absolute;
+  left: -30px;
+}
+
+.contact-details .contact-box .phone .icon {
+  top: 180px;
+}
+
+.contact-details .contact-box .content p {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+  line-height: 1.8;
+}
+
+.contact-details
+  .contact-box
+  .right
+  :is(.input-box:nth-child(1), .input-box:nth-child(4), .input-box:last-child) {
+  grid-column: 1 / -1;
+}
+
+.contact-details .contact-box .right .input-box:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.contact-details .contact-box .right .input-box button[type="submit"] {
+  background-color: #3843d0;
+  color: #fff;
+  padding: 5px 20px 10px 20px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.contact-details .contact-box .right .input-box button[type="submit"]:hover {
+  opacity: 0.9;
+}
+
+.contact-details .contact-box .right :is(input, textarea) {
+  width: 100%;
+  font-size: 0.8rem;
+  background: #ffffff;
+  border: 1px solid #859eb1;
+  border-radius: 8px;
+  padding: 6px 10px;
+  outline: none;
+  transition: border 0.5s ease;
+}
+
+.contact-details .contact-box .right :is(input, textarea):focus {
+  border: 1px solid #3843d0;
+}
+
+.contact-details .contact-box .right .error {
+  display: none;
+}
+
+.contact-details .contact-box .right .input-box {
+  position: relative;
+}
+
+.contact-details .contact-box .right label {
+  font-size: 0.775rem;
+  background-color: #fff;
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  display: inline-block;
+  padding: 0 5px;
+  pointer-events: none;
+  color: #666;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-details .contact-box .right :is(input, textarea):focus + label,
+.contact-details .contact-box .right :is(input, textarea).has-data + label {
+  top: -10px;
+  left: 13px;
+}
+
+/* 
+==================================================================================================
+google-map
+==================================================================================================
+*/
+
+.google-map {
+  width: 100%;
+  padding: 3rem 0;
+}
+
+.google-map .wrapper {
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 1rem;
+  margin-top: -150px;
+}
