@@ -1,0 +1,36 @@
+@media (max-width: 992px) {
+  .contact-details .contact-box {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-details .contact-box .left {
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .contact-details .contact-box .right {
+    border-radius: 0 0 1rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-details .contact-box :is(.address, .phone, .email) .icon {
+    position: static;
+  }
+
+  .contact-details .contact-box :is(.address, .phone, .email) {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-details .contact-box .left {
+    padding: 1rem 1.5rem;
+  }
+
+  .contact-details .contact-box .right {
+    padding: 1rem 1.5rem;
+    grid-template-columns: 1fr;
+  }
+}
